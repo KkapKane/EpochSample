@@ -1,57 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-#root{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+body,
+html {
+  font-family: "Poppins";
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-body {
-    font-family: "Poppins";
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-} 
-
+#root {
+  height: 100%;
+}
 .App {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    // background: url("../assets/bg.jpg");
-    // background-position: 0 90% ;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-attachment: fixed;
-    transition: 2000ms;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  // background: url("../assets/bg.jpg");
+  background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  transition: 2000ms;
 
-    .imgSelection-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-       
-        position: fixed;
-        bottom: 0%;
-        left: 50%;
-        height: 100px;
-        width: 100px;
-        
+  .imgSelection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
-        #box1 {
-            height: 10px;
-            width: 10px;
-            border-radius: 100vw;
-           border: 1px solid black;
-        }
-        #box2 {
-            height: 10px;
-            width: 10px;
-            border-radius: 100vw;
-            border: 1px solid black;
-            
-        }
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+
+    #box1 {
+      height: 10px;
+      width: 10px;
+      border-radius: 100vw;
+      border: 1px solid black;
     }
+    #box2 {
+      height: 10px;
+      width: 10px;
+      border-radius: 100vw;
+      border: 1px solid black;
+    }
+  }
+}
+
+@media screen and (max-width: 912px) {
+  #root {
+    height: 100% !important;
+  }
+  body,
+  html {
+    min-height: 100% !important;
+  }
+
+  .App {
+    background-size: cover;
+    background-position: 60% 0 !important;
+  }
+  .links {
+    display: none !important;
+  }
+  .slogan-container {
+    font-size: 4rem !important;
+    justify-content: none !important;
+  }
+  .glass-box {
+    margin-left: 0 !important;
+    width: 290% !important;
+  }
 }

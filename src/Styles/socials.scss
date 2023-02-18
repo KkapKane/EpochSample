@@ -10,3 +10,10 @@
     width: 14%;
 
 }
+
+@media screen and (max-width: 900px) {
+    #socials {
+        right: 10%;
+        width: 50%;
+    }
+}

@@ -1,57 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 #title {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 92%;
+  transition: 4000ms;
+
+  .slogan-container {
+    font-family: "Oswald";
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 1.7ch;
+    padding: 4rem;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 60%;
-    height: 92%;
-    transition: 2000ms;
 
-    .slogan-container {
-        font-family: "Oswald";
-        font-size: 6rem;
-        font-weight: bold;
-        line-height: 1.7ch;
-        padding: 4rem;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-       
-        
-        #ampersand{
-            color: transparent;
-            align-self: center;
-           
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: rgb(3, 3, 3);
-        }
-        #slogan1{
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: rgb(3, 3, 3);
-        }
-        #slogan2{
-            line-height: 1ch;
-            align-self: center;
-        }
-    }
-    .glass-box {
-        padding: .8rem;
-        
-        margin-left: 8rem;
+    #ampersand {
+      color: transparent;
+      align-self: center;
 
-        width: 35%;
-        border-radius: 4px;
-        background-color: rgba($color: #2c2b2b, $alpha: .25);
-        backdrop-filter: blur(2px);
-        transition: 1000ms;
-        #company-quote{
-            
-            color: white;
-            transition: 1000ms;
-        }
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: rgb(3, 3, 3);
     }
+    #slogan1 {
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: rgb(3, 3, 3);
+    }
+    #slogan2 {
+      line-height: 1ch;
+      align-self: center;
+    }
+  }
+  .glass-box {
+    padding: 0.8rem;
+
+    margin-left: 8rem;
+
+    width: 35%;
+    border-radius: 4px;
+    background-color: rgba($color: #2c2b2b, $alpha: 0.25);
+    backdrop-filter: blur(2px);
+    transition: 1000ms;
+    #company-quote {
+      color: white;
+      transition: 1000ms;
+    }
+  }
 }
