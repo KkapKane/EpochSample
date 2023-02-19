@@ -1,5 +1,4 @@
 import "../Styles/title.scss";
-import { useEffect } from "react";
 
 interface Props {
   currentImg: number;
@@ -7,31 +6,26 @@ interface Props {
 }
 
 export default function Title({ currentImg, isMobile }: Props) {
+  const titleHeight = currentImg == 0 ? "92%" : "128%";
+  const titleWidth = "20%";
+  const sloganContainerWidth = !isMobile ? "80%" : "200%";
+  const slogan1Color = currentImg == 1 ? "#448DC1" : "black";
+  const slogan1StrokeColor = currentImg == 1 ? "black" : "black";
+  const slogan1StrokeWidth = 3;
+  const glassBoxMarginLeft = currentImg == 0 ? "8rem" : "4rem";
+  const glassBoxWidth = "100%";
+  const glassBoxBackgroundColor =
+    currentImg == 0 ? "rgba(52, 52, 52, 0.25)" : "rgba(52, 52, 52, 0.75)";
+
   return (
-    <div
-      id='title'
-      style={
-        !isMobile
-          ? {
-              height: currentImg == 0 ? "92%" : "128%",
-              width: currentImg == 0 ? "20%" : "20%",
-            }
-          : {
-              height: currentImg == 0 ? "50%" : "104%",
-              width: currentImg == 0 ? "20%" : "20%",
-            }
-      }
-    >
-      <div
-        className='slogan-container'
-        style={!isMobile ? { width: "80%" } : { width: "200%" }}
-      >
+    <div id='title' style={{ height: titleHeight, width: titleWidth }}>
+      <div className='slogan-container' style={{ width: sloganContainerWidth }}>
         <div
           id='slogan1'
           style={{
-            color: currentImg == 1 ? "#448DC1" : "black",
-            WebkitTextStrokeColor: currentImg == 1 ? "black" : "black",
-            WebkitTextStrokeWidth: 3,
+            color: slogan1Color,
+            WebkitTextStrokeColor: slogan1StrokeColor,
+            WebkitTextStrokeWidth: slogan1StrokeWidth,
           }}
         >
           Innovation
@@ -44,13 +38,9 @@ export default function Title({ currentImg, isMobile }: Props) {
       <div
         className='glass-box'
         style={{
-          marginLeft: currentImg == 0 ? "8rem" : "4rem",
-
-          width: currentImg == 0 ? "100%" : "100%",
-          backgroundColor:
-            currentImg == 0
-              ? "rgba(52, 52, 52, 0.25)"
-              : "rgba(52, 52, 52, 0.75)",
+          marginLeft: glassBoxMarginLeft,
+          width: glassBoxWidth,
+          backgroundColor: glassBoxBackgroundColor,
         }}
       >
         <div id='company-quote'>
