@@ -14,11 +14,11 @@ export default function Title({ currentImg, isMobile }: Props) {
         !isMobile
           ? {
               height: currentImg == 0 ? "92%" : "128%",
-              width: currentImg == 0 ? "50%" : "25%",
+              width: currentImg == 0 ? "20%" : "20%",
             }
           : {
               height: currentImg == 0 ? "50%" : "104%",
-              width: currentImg == 0 ? "20%" : "30%",
+              width: currentImg == 0 ? "20%" : "20%",
             }
       }
     >
@@ -46,7 +46,7 @@ export default function Title({ currentImg, isMobile }: Props) {
         style={{
           marginLeft: currentImg == 0 ? "8rem" : "4rem",
 
-          width: currentImg == 0 ? "35%" : "120%",
+          width: currentImg == 0 ? "100%" : "100%",
           backgroundColor:
             currentImg == 0
               ? "rgba(52, 52, 52, 0.25)"
