@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function Title({ currentImg, isMobile }: Props) {
-  const titleHeight = currentImg == 0 ? "92%" : "128%";
+  const titleHeight = currentImg == 0 ? "70%" : "110%";
   const titleWidth = "20%";
   const sloganContainerWidth = !isMobile ? "80%" : "200%";
   const slogan1Color = currentImg == 1 ? "#448DC1" : "black";
